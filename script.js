@@ -72,6 +72,9 @@ function lastUpdated(data) {
     /* convert to Vietnam time */
     let index = data.response[0].time.toString().search("T");
     let hours = (Number)(data.response[0].time.toString().substr(index + 1, 2)) + 7;
+    if( hours >= 24) {
+        hours -= 24;
+    }
     /* render */
     updated.innerHTML = data.response[0].time.toString().replace(/T\d{2}/g, " " + hours).replace(/\+00\:00/g, "");
 }
