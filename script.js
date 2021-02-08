@@ -7,7 +7,7 @@ const options = {
     }
 }
 
-
+const countryName = document.querySelector('.country--name h2');
 const countryCases = document.getElementById('country--cases');
 const countryActive = document.getElementById('country--active');
 const countryRecoverd = document.getElementById('country--recovered');
@@ -33,8 +33,6 @@ function getAllInformation(url, options) {
             return response.json();
         })
         .then(data => {
-            console.log(data);
-            console.log(data.response[68]);
             renderCountry("Vietnam", data);
             renderTheWorld(data);
             lastUpdated(data);
@@ -46,7 +44,8 @@ function getAllInformation(url, options) {
 
 function renderCountry(country, data) {
     for (let i = 0; i < data.response.length; i++) {
-        if (data.response[i].country.toLowerCase() == "vietnam") {
+        if (data.response[i].country.toLowerCase() == country.toLowerCase()) {
+            // countryName.innerHTML = country.toLowerCase() == "vietnam" ? "Việt Nam" : data.response[i].country;
             countryCases.innerHTML = data.response[i].cases.total.toString().replace(regex, ".");
             countryActive.innerHTML = data.response[i].cases.active.toString().replace(regex, ".");
             countryRecoverd.innerHTML = data.response[i].cases.recovered.toString().replace(regex, ".");
@@ -70,5 +69,9 @@ function renderTheWorld(data) {
 }
 
 function lastUpdated(data) {
-    updated.innerHTML = "Dữ liệu được cập nhật lúc: " + data.response[0].time.toString().replace(/T/g, " T");
+    /* convert to Vietnam time */
+    let index = data.response[0].time.toString().search("T");
+    let hours = (Number)(data.response[0].time.toString().substr(index + 1, 2)) + 7;
+    /* render */
+    updated.innerHTML = data.response[0].time.toString().replace(/T\d{2}/g, " " + hours).replace(/\+00\:00/g, "");
 }
