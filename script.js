@@ -18,6 +18,8 @@ const theWorldActive = document.getElementById('theworld--active');
 const theWorldRecoverd = document.getElementById('theworld--recovered');
 const theWorldDeaths = document.getElementById('theworld--deaths');
 
+const updated = document.getElementById('last-updated');
+
 const regex = /\B(?=(\d{3})+(?!\d))/g;
 
 
@@ -35,6 +37,7 @@ function getAllInformation(url, options) {
             console.log(data.response[68]);
             renderCountry("Vietnam", data);
             renderTheWorld(data);
+            lastUpdated(data);
         })
         .catch(err => {
             console.error(err);
@@ -64,4 +67,8 @@ function renderTheWorld(data) {
             break;
         }
     }
+}
+
+function lastUpdated(data) {
+    updated.innerHTML = "Dữ liệu được cập nhật lúc: " + data.response[0].time.toString().replace(/T/g, " T");
 }

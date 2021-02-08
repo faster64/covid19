@@ -82,4 +82,9 @@ body {
 .container .theworld--information div:nth-child(4) span {
   color: #666666;
 }
+
+.container .updated span {
+  color: #333;
+  font-size: 24px;
+}
 /*# sourceMappingURL=style.css.map */
