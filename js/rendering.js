@@ -1,0 +1,62 @@
+function showAll() {
+    dataFromAPI
+        .then(function (data) {
+            renderInformation(indexOfVietnam, false);
+            renderInformation(indexOfTheWorld, true);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+}
+
+function renderInformation(index, isTheworld) {
+    const cases = isTheworld ? theWorldCases : countryCases;
+    const active = isTheworld ? theWorldActive : countryActive;
+    const recoverd = isTheworld ? theWorldRecoverd : countryRecoverd;
+    const deaths = isTheworld ? theWorldDeaths : countryDeaths;
+
+    dataFromAPI.then(data => {
+        try {
+            console.log("New cases: " + data.response[index].cases.new);
+            if (!isTheworld) {
+                console.log("Population: " + data.response[index].population.toString().replace(regex, ".") + " people");
+            }
+            !isTheworld ? countryName.innerHTML = data.response[index].country : "";
+            cases.innerHTML = data.response[index].cases.total.toString().replace(regex, ".");
+            active.innerHTML = data.response[index].cases.active.toString().replace(regex, ".");
+            recoverd.innerHTML = data.response[index].cases.recovered.toString().replace(regex, ".");
+            deaths.innerHTML = data.response[index].deaths.total.toString().replace(regex, ".");
+        } catch (error) {
+            console.clear();
+            console.log("Lỗi xíu nhẹ :v");
+        };
+    })
+}
+
+function lastUpdated() {
+    dataFromAPI.then(data => {
+        try {
+            /* convert to Vietnam time */
+            let index = data.response[0].time.toString().search("T");
+            let hours = (Number)(data.response[0].time.toString().substr(index + 1, 2)) + 7;
+            if (hours >= 24) {
+                hours -= 24;
+            }
+            /* render */
+            updated.innerHTML = data.response[0].time.toString().replace(/T\d{2}/g, " " + hours).replace(/\+00\:00/g, "");
+        } catch (error) {
+            console.log("Lỗi xíu nhẹ :v");
+        };
+    })
+}
+
+function renderSelection() {
+    dataFromAPI.then(data => {
+        for (let i = 0; i < data.response.length; i++) {
+            let optionTag = document.createElement('option');
+            optionTag.text = data.response[i].country;
+            optionTag.value = i;
+            selectCountry.add(optionTag);
+        }
+    })
+}

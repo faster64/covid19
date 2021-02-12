@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300">
     <title>Covid-19</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="shortcut icon" href="https://ncov.moh.gov.vn/o/corona-theme-guest/images/favicon.ico"
@@ -16,7 +17,7 @@
 <body>
     <div class="container mt-5 px-4">
         <div class="country--name row">
-            <h2 class="col-12 text-center">Việt Nam</h2>
+            <h2 class="col-12 text-center" id="country-name">Việt Nam</h2>
         </div>
         <div class="country--information row text-center">
             <div class="col-6 col-md-3">
@@ -24,7 +25,7 @@
                 <span id="country--cases"></span>
             </div>
             <div class="col-6 col-md-3">
-                <h3>Đang là Zoombie</h3>
+                <h3>Đang là Zombie</h3>
                 <span id="country--active"></span>
             </div>
             <div class="col-6 col-md-3">
@@ -36,6 +37,11 @@
                 <span id="country--deaths"></span>
             </div>
         </div>
+        <div class="other-countries row">
+            <select name="select-country" id="select-country" class="col-6 col-md-4 mx-auto">
+                <option id="default-country">Việt Nam</option>
+            </select>
+        </div>
         <div class="theworld row">
             <h2 class="col-12 text-center">Thế giới</h2>
         </div>
@@ -45,7 +51,7 @@
                 <span id="theworld--cases"></span>
             </div>
             <div class="col-6 col-md-3">
-                <h3>Đang là Zoombie</h3>
+                <h3>Đang là Zombie</h3>
                 <span id="theworld--active"></span>
             </div>
             <div class="col-6 col-md-3">
@@ -64,7 +70,9 @@
             </span>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/rendering.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

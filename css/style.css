@@ -38,7 +38,7 @@ body {
 .container .country--information,
 .container .theworld--information {
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .container .country--information div,
@@ -92,6 +92,18 @@ body {
 .container .theworld--information div:nth-child(4) h3,
 .container .theworld--information div:nth-child(4) span {
   color: #666666;
+}
+
+.container .other-countries {
+  margin-bottom: 30px;
+}
+
+.container .other-countries select {
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  background: white;
 }
 
 .container .updated span {
