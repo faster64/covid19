@@ -7,6 +7,7 @@ const options = {
     }
 }
 const dataFromAPI = getDataFromAPI(API_URL, options);
+
 let indexOfVietnam = null;
 let indexOfTheWorld = null;
 
@@ -27,7 +28,7 @@ dataFromAPI.then(data => {
 window.onload = function () {
     showAll();
     renderSelection();
-    lastUpdated();
+    lastUpdate();
     selectCountry.onchange = () => {
         console.clear();
         renderInformation(selectCountry.value, false);

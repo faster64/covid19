@@ -12,7 +12,8 @@ const theWorldRecoverd = document.getElementById('theworld--recovered');
 const theWorldDeaths = document.getElementById('theworld--deaths');
 
 const selectCountry = document.getElementById('select-country');
-const updated = document.getElementById('last-updated');
+const updated = document.getElementById('last-update');
+
 
 /* regular expression for format information */
 const regex = /\B(?=(\d{3})+(?!\d))/g;

@@ -10,6 +10,16 @@ body {
     min-height: 100vh;
 }
 .container {
+    .introduction {
+        margin-bottom: 50px;
+        h1 {
+            color: #c9302c;
+            text-transform: uppercase;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 550;
+            font-size: 28px;
+        }
+    }
     .country--name,
     .theworld {
         background: #c9302c;

@@ -19,9 +19,11 @@ function renderInformation(index, isTheworld) {
         try {
             console.log("New cases: " + data.response[index].cases.new);
             if (!isTheworld) {
+                let country = data.response[index].country;
+                country = country.toLowerCase() == "vietnam" ? "Việt Nam" : country;
+                countryName.innerHTML = country;
                 console.log("Population: " + data.response[index].population.toString().replace(regex, ".") + " people");
             }
-            !isTheworld ? countryName.innerHTML = data.response[index].country : "";
             cases.innerHTML = data.response[index].cases.total.toString().replace(regex, ".");
             active.innerHTML = data.response[index].cases.active.toString().replace(regex, ".");
             recoverd.innerHTML = data.response[index].cases.recovered.toString().replace(regex, ".");
@@ -33,7 +35,7 @@ function renderInformation(index, isTheworld) {
     })
 }
 
-function lastUpdated() {
+function lastUpdate() {
     dataFromAPI.then(data => {
         try {
             /* convert to Vietnam time */
