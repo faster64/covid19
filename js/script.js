@@ -6,6 +6,7 @@ const options = {
         "x-rapidapi-host": "covid-193.p.rapidapi.com"
     }
 }
+
 const dataFromAPI = getDataFromAPI(API_URL, options);
 
 let indexOfVietnam = null;

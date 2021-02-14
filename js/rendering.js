@@ -17,12 +17,12 @@ function renderInformation(index, isTheworld) {
 
     dataFromAPI.then(data => {
         try {
-            console.log("New cases: " + data.response[index].cases.new);
+            console.log("[" + data.response[index].country + "] " + "New cases: " + data.response[index].cases.new);
             if (!isTheworld) {
                 let country = data.response[index].country;
                 country = country.toLowerCase() == "vietnam" ? "Việt Nam" : country;
                 countryName.innerHTML = country;
-                console.log("Population: " + data.response[index].population.toString().replace(regex, ".") + " people");
+                console.log("[" + data.response[index].country + "] " + "Population: " + data.response[index].population.toString().replace(regex, ".") + " people");
             }
             cases.innerHTML = data.response[index].cases.total.toString().replace(regex, ".");
             active.innerHTML = data.response[index].cases.active.toString().replace(regex, ".");
@@ -54,11 +54,13 @@ function lastUpdate() {
 
 function renderSelection() {
     dataFromAPI.then(data => {
+        let options = "";
         for (let i = 0; i < data.response.length; i++) {
-            let optionTag = document.createElement('option');
-            optionTag.text = data.response[i].country;
-            optionTag.value = i;
-            selectCountry.add(optionTag);
+            options += `<option value = ${i}>${data.response[i].country}</option>`;
+            selectCountry.innerHTML = options;
         }
     })
+        .catch(err => {
+            console.log(err);
+        })
 }
