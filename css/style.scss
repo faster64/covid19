@@ -15,7 +15,7 @@ body {
         h1 {
             color: #c9302c;
             text-transform: uppercase;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: "Courier New", Courier, monospace;
             font-weight: 550;
             font-size: 28px;
         }
@@ -75,13 +75,7 @@ body {
     }
     .other-countries {
         margin-bottom: 30px;
-        select {
-            padding: 5px;
-            cursor: pointer;
-            outline: none;
-            border-radius: 5px;
-            background: rgb(255, 255, 255);
-        }
+        font-size: 28px;
     }
     .updated {
         span {
@@ -90,4 +84,5 @@ body {
             font-style: italic;
         }
     }
+    /* ------------------- */
 }

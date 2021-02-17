@@ -1,12 +1,3 @@
-const API_URL = "https://covid-193.p.rapidapi.com/statistics";
-const options = {
-    "method": "GET",
-    "headers": {
-        "x-rapidapi-key": "12c92ef504msh73fb12b3fa0d984p1ad16djsn72f8afe0a019",
-        "x-rapidapi-host": "covid-193.p.rapidapi.com"
-    }
-}
-
 const dataFromAPI = getDataFromAPI(API_URL, options);
 
 let indexOfVietnam = null;
@@ -28,11 +19,6 @@ dataFromAPI.then(data => {
 
 window.onload = function () {
     showAll();
-    renderSelection();
     lastUpdate();
-    selectCountry.onchange = () => {
-        console.clear();
-        renderInformation(selectCountry.value, false);
-    }
 }
 

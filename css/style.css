@@ -18,6 +18,10 @@ body {
   min-height: 100vh;
 }
 
+.container {
+  /* ------------------- */
+}
+
 .container .introduction {
   margin-bottom: 50px;
 }
@@ -25,7 +29,7 @@ body {
 .container .introduction h1 {
   color: #c9302c;
   text-transform: uppercase;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 550;
   font-size: 28px;
 }
@@ -108,14 +112,7 @@ body {
 
 .container .other-countries {
   margin-bottom: 30px;
-}
-
-.container .other-countries select {
-  padding: 5px;
-  cursor: pointer;
-  outline: none;
-  border-radius: 5px;
-  background: white;
+  font-size: 28px;
 }
 
 .container .updated span {

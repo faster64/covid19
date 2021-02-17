@@ -53,17 +53,3 @@ function lastUpdate() {
             };
         })
 }
-
-function renderSelection() {
-    dataFromAPI
-        .then(data => {
-            let options = `<option value = ${indexOfVietnam}>Việt Nam</option>`;
-            for (let i = 0; i < data.response.length; i++) {
-                options += `<option value = ${i}>${data.response[i].country}</option>`;
-                selectCountry.innerHTML = options;
-            }
-        })
-        .catch(err => {
-            console.log(err);
-        })
-}

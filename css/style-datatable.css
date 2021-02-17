@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#introduction {
+  margin: 50px 0;
+}
+
+#introduction h1 {
+  font-size: 24px;
+  color: #0093d5;
+}
+
+#introduction .sign-in-button #my-signin2 {
+  display: inline-block;
+}
+
+#introduction .sign-in-button #my-signout2 {
+  display: none;
+  padding: 10px 30px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+}
+
+#data-table {
+  padding: 10px 20px;
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+}
+
+#data-table .thead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fdfdfd;
+  border-bottom: 1px solid black;
+}
+
+#data-table .thead span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#data-table .thead span:not(:first-child) {
+  padding: 0 10px !important;
+}
+
+#data-table #data {
+  max-height: 60vh;
+  overflow: auto;
+}
+
+#data-table #data .country div span {
+  display: inline-block;
+  color: black;
+  font-weight: 450;
+  padding: 10px 0;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+#data-table #data .country div span img {
+  display: inline-block;
+  max-width: 30px;
+  margin-right: 5px;
+}
+
+#data-table #data .country div span:nth-child(4) {
+  color: red;
+  font-weight: 550;
+}
+
+#data-table #data #loading {
+  margin: 30px 0;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#last-update {
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 768px) {
+  #introduction h1 {
+    font-size: 18px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #introduction {
+    margin: 25px 0 !important;
+  }
+  #introduction h1 {
+    font-size: 14px !important;
+  }
+  #data-table {
+    padding: 0 !important;
+  }
+  #data-table .thead span {
+    font-size: 11px !important;
+  }
+  #data-table #data span {
+    font-size: 11px !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #introduction {
+    margin: 25px 0 !important;
+  }
+  #introduction h1 {
+    font-size: 14px !important;
+  }
+  #data-table {
+    padding: 0 !important;
+  }
+  #data-table .thead span {
+    font-size: 10px !important;
+  }
+  #data-table #data span {
+    font-size: 10px !important;
+  }
+}
+/*# sourceMappingURL=style-datatable.css.map */

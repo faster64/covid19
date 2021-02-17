@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+    <link rel="stylesheet" href="css/style-datatable.css">
+    <link rel="shortcut icon" href="https://ncov.moh.gov.vn/o/corona-theme-guest/images/favicon.ico"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <meta name="google-signin-client_id"
+        content="780660151655-q8csvsr8mk60igsvl192v9goje74cmgt.apps.googleusercontent.com">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="introduction">
+            <h1 class="col-12 text-center">WHO Coronavirus Disease (COVID-19) Dashboard</h1>
+            <div class="sign-in-button col-12 text-md-right text-center">
+                <div id="my-signin2"></div>
+                <button id="my-signout2" onclick="signOut()">Log Out</button>
+            </div>
+        </div>
+        <div id="data-table">
+            <div class="thead p-0 m-0 row ">
+                <span class="col-3 p-0 text-left">Name</span>
+                <span class="col-3 p-0 text-center">Cases - cumulative total</span>
+                <span class="col-2 p-0 text-center">Cases - newly reported in last 24 hours</span>
+                <span class="col-2 p-0 text-center">Deaths - cumulative total</span>
+                <span class="col-2 p-0 text-center">Deaths - newly reported in last 24 hours</span>
+            </div>
+            <div class="row p-0 m-0" id="data">
+                <div class="col-12 text-center" id="loading">Loading...</div>
+                <div class="col-12 country"></div>
+            </div>
+        </div>
+        <div class="row">
+            <span class="col-12 text-center" id="last-update"></span>
+        </div>
+    </div>
+    <script src="js/core.js"></script>
+    <script src="js/rendering.js"></script>
+    <script src="js/datatable.js"></script>
+</body>
+
+</html>
