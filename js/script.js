@@ -10,7 +10,6 @@ dataFromAPI.then(data => {
         if (country == "vietnam" || country == "all") {
             country == "vietnam" ? (indexOfVietnam = i) : (indexOfTheWorld = i);
             if (indexOfVietnam != null && indexOfTheWorld != null) {
-                document.getElementById('default-country').value = indexOfVietnam;
                 return;
             }
         }

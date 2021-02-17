@@ -112,7 +112,12 @@ body {
 
 .container .other-countries {
   margin-bottom: 30px;
-  font-size: 28px;
+  font-size: 24px;
+}
+
+.container .other-countries a {
+  border-top: 1px solid #007bff;
+  border-bottom: 1px solid #007bff;
 }
 
 .container .updated span {
