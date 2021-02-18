@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300">
     <title>Data Table</title>
     <link rel="stylesheet" href="css/style-datatable.css">
     <link rel="shortcut icon" href="https://ncov.moh.gov.vn/o/corona-theme-guest/images/favicon.ico"
@@ -15,6 +16,7 @@
 </head>
 
 <body>
+    <div id="mask-popup"></div>
     <div class="container">
         <div class="row" id="introduction">
             <h1 class="col-12 text-center">WHO Coronavirus Disease (COVID-19) Dashboard</h1>
@@ -45,10 +47,21 @@
         <div class="row">
             <span class="col-12 text-center" id="last-update"></span>
         </div>
+        <div class="row">
+            <div class="col-10 col-md-6 mx-auto" id="popup">
+                <p class="message"></p>
+                <div class="btn">
+                    <button id="accept">Okay</button>
+                    <button id="cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/core.js"></script>
     <script src="js/rendering.js"></script>
     <script src="js/datatable.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/popup.js"></script>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 </body>
 
