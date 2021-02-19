@@ -2,12 +2,6 @@ const dataRow = document.querySelector('#data .country');
 const countries_API = "https://restcountries.eu/rest/v2/all";
 let flagURLs = [];
 
-const loading = document.getElementById('loading');
-let loadingText = "Loading...";
-let pos = 7; /* first dot */
-let interval = null;
-
-
 (function renderDataTable() {
     const s = Date.now(); // starting time  
     Promise.all([getCountryData(countries_API), getDataFromAPI(API_URL, options)])
@@ -49,7 +43,7 @@ let interval = null;
                 console.log("Lỗi xíu nhẹ :v");
             };
             removeLoading();
-            console.log("Loading time: ", (Date.now() - s).toString().replace(regex, ".") + "s")
+            console.log("Loading time: ", (Date.now() - s)/1000 + "s")
         })
         .catch(err => {
             console.log(err);
@@ -117,18 +111,6 @@ function prepareRender(html, flagUrl, country, confirmedCases, newCases, deaths,
 function sortConfirmedCases(data) {
     data.response.sort((a, b) => b.cases.total - a.cases.total);
 }
-/* ------------------ loading animation ------------------ */
 
-interval = setInterval(() => {
-    loading.innerHTML = loadingText.substr(0, pos++);
-    if (pos == 11) {
-        pos = 7;
-    }
-}, 300);
-
-function removeLoading() {
-    clearInterval(interval);
-    loading.style.display = "none";
-}
 
 

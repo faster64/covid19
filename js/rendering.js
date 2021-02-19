@@ -21,7 +21,6 @@ function renderInformation(index, isTheworld) {
                 console.log("[" + data.response[index].country + "] " + "New cases: " + data.response[index].cases.new);
                 if (!isTheworld) {
                     let country = data.response[index].country;
-                    country = country.toLowerCase() == "vietnam" ? "Việt Nam" : country;
                     countryName.innerHTML = country;
                     console.log("[" + data.response[index].country + "] " + "Population: " + data.response[index].population.toString().replace(regex, ".") + " people");
                 }

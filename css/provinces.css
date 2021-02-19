@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  padding: 15px;
+}
+
+.container .flag {
+  margin: 10px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .flag img {
+  max-width: 20%;
+}
+
+.container .total span {
+  font-weight: 700;
+}
+
+.container .note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0;
+}
+
+.container .note div {
+  width: 15px;
+  height: 15px;
+}
+
+.container .note span {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.container .note .confirmed {
+  background-color: #ff9c00;
+}
+
+.container .note .recovered {
+  background-color: green;
+}
+
+.container .note .deaths {
+  background-color: red;
+}
+
+.container .data {
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container .data .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0;
+}
+
+.container .data .row:nth-child(odd) {
+  background-color: #f8f8f8;
+}
+
+.container .data .row div.line {
+  position: relative;
+  padding: 5px 0;
+  border-radius: 10px;
+  background-color: blue;
+}
+
+@media screen and (max-width: 768px) {
+  .data span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .data span {
+    font-size: 10px;
+  }
+  .data .row div {
+    padding: 3px 0 !important;
+  }
+}
+/*# sourceMappingURL=provinces.css.map */

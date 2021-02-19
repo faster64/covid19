@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    padding: 15px;
+    .flag {
+        margin: 10px 0;
+        justify-content: center;
+        img {
+            max-width: 20%;
+        }
+    }
+    .total {
+        span {
+            font-weight: 700;
+        }
+    }
+    .note {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+        div {
+            width: 15px;
+            height: 15px;
+        }
+        span {
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+        .confirmed {
+            background-color: #ff9c00;
+        }
+        .recovered {
+            background-color: green;
+        }
+        .deaths {
+            background-color: red;
+        }
+    }
+    .data {
+        max-height: 60vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .row {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            &:nth-child(odd) {
+                background-color: rgb(248, 248, 248);
+            }
+            div.line {
+                position: relative;
+                padding: 5px 0;
+                border-radius: 10px;
+                background-color: blue;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .data {
+        span {
+            font-size: 14px;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .data {
+        span {
+            font-size: 10px;
+        }
+        .row {
+            div {
+                padding: 3px 0 !important;
+            }
+        }
+    }
+}

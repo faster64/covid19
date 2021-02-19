@@ -16,7 +16,7 @@ function showPopup() {
     let profile = auth2.currentUser.get().getBasicProfile();
     let user = profile.getGivenName();
 
-    message.innerHTML = "Hi " + user + ". Would you like to receive the notifications about the Covid 19?"
+    message.innerHTML = "Hi " + user + ". Would you like to receive the notifications about the Covid-19?"
     maskPopup.style.display = "block";
     popup.style.display = "block";
 

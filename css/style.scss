@@ -75,7 +75,7 @@ body {
     }
     .other-countries {
         margin-bottom: 30px;
-        font-size: 24px;
+        font-size: 18px;
         a {
             border-top: 1px solid #007bff;
             border-bottom: 1px solid #007bff;
@@ -89,4 +89,12 @@ body {
         }
     }
     /* ------------------- */
+}
+
+@media screen and ( max-width: 768px) {
+    .introduction {
+        h1 {
+            font-size: 16px !important;
+        }
+    }
 }
