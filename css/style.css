@@ -126,6 +126,12 @@ body {
   font-style: italic;
 }
 
+.container .footer span {
+  font-size: 12px;
+  color: #c9302c;
+  font-weight: 700;
+}
+
 @media screen and (max-width: 768px) {
   .introduction h1 {
     font-size: 16px !important;

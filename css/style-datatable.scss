@@ -42,7 +42,6 @@ body {
 #data-table {
     padding: 10px 20px;
     border: 1px solid rgb(170, 170, 170);
-    border-radius: 10px;
     .thead {
         display: flex;
         align-items: center;
@@ -61,12 +60,14 @@ body {
         overflow: auto;
         .country {
             div {
+                &:nth-child(odd) {
+                    background-color: rgb(245, 245, 245);
+                }
                 span {
                     display: inline-block;
                     color: black;
                     font-weight: 450;
                     padding: 10px 0;
-                    border-bottom: 1px solid rgb(170, 170, 170);
                     img {
                         display: inline-block;
                         max-width: 30px;

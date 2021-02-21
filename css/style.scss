@@ -88,10 +88,17 @@ body {
             font-style: italic;
         }
     }
+    .footer {
+        span {
+            font-size: 12px;
+            color: #c9302c;
+            font-weight: 700;
+        }
+    }
     /* ------------------- */
 }
 
-@media screen and ( max-width: 768px) {
+@media screen and (max-width: 768px) {
     .introduction {
         h1 {
             font-size: 16px !important;

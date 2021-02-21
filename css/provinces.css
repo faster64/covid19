@@ -40,7 +40,7 @@
 }
 
 .container .note span {
-  margin-left: 5px;
+  margin-left: 2px;
   margin-right: 10px;
 }
 
@@ -76,11 +76,20 @@
   background-color: #f8f8f8;
 }
 
+.container .data .row span {
+  font-weight: 550;
+}
+
 .container .data .row div.line {
-  position: relative;
   padding: 5px 0;
-  border-radius: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   background-color: blue;
+}
+
+.container #loading {
+  font-size: 28px;
+  font-weight: 550;
 }
 
 @media screen and (max-width: 768px) {
@@ -93,7 +102,7 @@
   .data span {
     font-size: 10px;
   }
-  .data .row div {
+  .data .row div.line {
     padding: 3px 0 !important;
   }
 }

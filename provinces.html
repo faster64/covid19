@@ -15,10 +15,10 @@
 
 <body>
     <div class="container">
-        <div class="row flag">
-            <img src="https://restcountries.eu/data/vnm.svg" alt="" class="col-12 text-center">
+        <div class="row flag d-none d-md-flex">
+            <img src="https://anhdepblog.com/wp-content/uploads/2018/08/co-to-quoc.gif" alt="" class="col-12 text-center">
         </div>
-        <div class="row total">
+        <div class="row total mt-3">
             <span class="col-12">0 TỈNH THÀNH CÓ CA NHIỄM COVID-19</span>
         </div>
         <div class="row note">
@@ -26,8 +26,13 @@
             <div class="recovered"></div> <span>Phục hồi</span>
             <div class="deaths"></div> <span>Tử vong</span>
         </div>
+        <div class="row">
+            <div class="col-12 text-center" id="loading"></div>
+        </div>
         <div class="data"></div>
+       
     </div>
+    <script src="js/loading.js"></script>
     <script src="js/province-list.js"></script>
 </body>
 
