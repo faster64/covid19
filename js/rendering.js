@@ -2,7 +2,9 @@ function showAll() {
     dataFromAPI
         .then(function (data) {
             renderInformation(indexOfVietnam, false);
-            renderInformation(indexOfTheWorld, true);
+            if (!getDataError) {
+                renderInformation(indexOfTheWorld, true);
+            }
         })
         .catch(err => {
             console.error(err);
@@ -29,8 +31,10 @@ function renderInformation(index, isTheworld) {
                 recoverd.innerHTML = data.response[index].cases.recovered.toString().replace(regex, ".");
                 deaths.innerHTML = data.response[index].deaths.total.toString().replace(regex, ".");
             } catch (error) {
+                getDataError.value = true;
                 console.clear();
                 console.log("Lỗi xíu nhẹ :v");
+                alert("API của bên thứ 3 không còn khả dụng!");
             };
         })
 }

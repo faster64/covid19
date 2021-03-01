@@ -37,7 +37,7 @@ body {
 .container .country--name,
 .container .theworld {
   background: #c9302c;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .container .country--name.theworld,

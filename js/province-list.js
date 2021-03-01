@@ -1,6 +1,7 @@
 const url = "https://dealhuntersuite.com/api/corona";
 const total = document.querySelector('.total span');
 const dataRow = document.querySelector('.data');
+const s = Date.now();
 
 render();
 window.onresize = () => {
@@ -17,7 +18,7 @@ function render() {
             const list = data.data.vietnam.list;
             const cases = data.data.vietnam.confirmed;
             const biggest = list[0].confirmed;
-            const widthOfColumn = total.offsetWidth / 12; /* because total have class col-12 */
+            const widthOfColumn = total.offsetWidth / 12; /* because total has class col-12 */
             let html = "";
 
             total.innerHTML = list.length + " TỈNH THÀNH CÓ CA NHIỄM COVID-19";
@@ -34,6 +35,7 @@ function render() {
             dataRow.innerHTML = html;
             removeLoading();
             CuongNguyenBelongsToVietnam();
+            console.log("Loading time:", (Date.now() - s) / 1000 + "s");
         })
 };
 

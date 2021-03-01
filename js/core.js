@@ -6,6 +6,7 @@ const options = {
         "x-rapidapi-host": "covid-193.p.rapidapi.com"
     }
 }
+let getDataError = {value: false};
 
 /* variables of country*/
 const countryName = document.querySelector('.country--name h2');
